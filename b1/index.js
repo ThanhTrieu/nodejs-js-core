@@ -101,3 +101,21 @@ switch(number3) {
 for(let i = 0; i < 100; i++){
   console.log(i);
 }
+
+let j = 9;
+let i = 10;
+let o = (i%j == 0) ? j : ( i - j > j -i ? i : j); // toan tu dieu kien
+console.log(o);
+if(i%j==0){
+  let k = j;
+} else {
+  let k = i;
+}
+
+let t = 10;
+let q = 9;
+let l = (t++) + (q++) - (++t) - (++q) + (t--) + (--q);
+//        10  +   9   -   11  -   10   +  11  +   9
+//        10   +  9   -   12  -   11   +  12  +   10
+
+console.log(10  +   9   -   11  -   10   +  11  +   9); // 10 - 20 - 16
