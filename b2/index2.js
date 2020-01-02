@@ -24,3 +24,4 @@ console.log(testString, newString);
 
 let id = Symbol('id');
 console.log(id.toString());
+
