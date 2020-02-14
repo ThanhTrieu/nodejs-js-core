@@ -4,8 +4,20 @@
   "description": "learning js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node ./pages/index.js"
   },
   "author": "trieunt",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.4"
+  }
 }

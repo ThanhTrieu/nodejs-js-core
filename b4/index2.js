@@ -1,3 +1,5 @@
+const fetch = require("node-fetch");
+
 function con_meo_di_an(cb, cb2){
  
   setTimeout(()=> {
@@ -67,3 +69,18 @@ const dtF1 = f1(1);
 console.log(dtF1.next().value);
 //console.log(dtF1.next().value);
 //console.log(dtF1.next().value);
+
+const getDataMovies = async (url) => {
+  const respone = await fetch(url);
+  const movies = respone.json();
+  return movies;
+}
+
+//getDataMovies('https://www.themoviedb.org/search/multi?language=vi&query=Avengers%3A%20Infinity%20Wa').then(data => console.log(data));
+
+function* getDataMoviesv2(url) {
+  const respone = yield fetch(url);
+  // respone.then((data) => (data.json()));
+}
+//console.log(getDataMoviesv2(`https://www.themoviedb.org/search/multi?language=vi&query=Avengers%3A%20Infinity%20Wa`).next().value);
+getDataMoviesv2(`https://www.themoviedb.org/search/multi?language=vi&query=Avengers%3A%20Infinity%20Wa`).next().value.then(data => (data)).then(dt => (dt.json())).then(t => console.log(t));
